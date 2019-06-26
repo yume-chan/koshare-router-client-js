@@ -1,10 +1,10 @@
 dependencies:
   '@yume-chan/async-operation-manager': 1.0.1
-  '@yume-chan/multi-map': 1.0.1
+  '@yume-chan/multi-map': 1.0.2
 devDependencies:
   '@jest-runner/electron': 2.0.2_electron@5.0.5
   '@types/jest': 24.0.15
-  '@types/ws': 6.0.1
+  '@types/node': 12.0.10
   '@yume-chan/koshare-router': 1.0.3
   electron: 5.0.5
   jest: 24.8.0
@@ -1019,10 +1019,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-CeBpmX1J8kWLcDEnI3Cl2Eo6RfbGvzUctA+CjZUhOKDFbLfcr7fc4usEqLNWetrlJd7RhAkyYe2czXop4fICpw==
-  /@types/events/3.0.0:
-    dev: true
-    resolution:
-      integrity: sha512-EaObqwIvayI5a8dCzhFrjKzVwKLxjoG9T6Ppd5CEo07LRKfQ8Yokw54r5+Wq7FaBQ+yXRvQAYPrHwya1/UFt9g==
   /@types/istanbul-lib-coverage/2.0.1:
     dev: true
     resolution:
@@ -1062,13 +1058,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-l42BggppR6zLmpfU6fq9HEa2oGPEI8yrSPL3GITjfRInppYFahObbIQOQK3UGxEnyQpltZLaPe75046NOZQikw==
-  /@types/ws/6.0.1:
-    dependencies:
-      '@types/events': 3.0.0
-      '@types/node': 12.0.10
-    dev: true
-    resolution:
-      integrity: sha512-EzH8k1gyZ4xih/MaZTXwT2xOkPiIMSrhQ9b8wrlX88L0T02eYsddatQlwVFlEPyEqV0ChpdpNnE51QPH6NVT4Q==
   /@types/yargs/12.0.12:
     dev: true
     resolution:
@@ -1084,10 +1073,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-ORKu8NvfP2W1x+fWEX4XLidO3673JTOTQeVPscQq0dbdFXtzI+N7t9gvy4pL291FZDqKQenGPD3+gVjZ4ndUAw==
-  /@yume-chan/multi-map/1.0.1:
+  /@yume-chan/multi-map/1.0.2:
     dev: false
     resolution:
-      integrity: sha512-ULTmNn6pTNXjo38nMPVTDwbqv/7gx47BMx4SmrpEF+ZgMrxqOgsJg3lV3v1bI5PGnG3A0kZR7bY1oviSAOUQOg==
+      integrity: sha512-9eZxFjF6LadEaO21YHDrGHkJzt5Gtc10Uv7uwr2KzWT8X23hxqGML6n8RatvlCBz2f9KqZkxhfFD9lK/a6MWPA==
   /abab/2.0.0:
     dev: true
     resolution:
@@ -2802,6 +2791,9 @@ packages:
       node: '>=6'
     peerDependencies:
       jest-resolve: '*'
+    peerDependenciesMeta:
+      jest-resolve:
+        optional: true
     resolution:
       integrity: sha512-pgFw2tm54fzgYvc/OHrnysABEObZCUNFnhjoRjaVOCN8NYc032/gVjPaHD4Aq6ApkSieWtfKAFQtmDKAmhupnQ==
   /jest-regex-util/24.3.0:
@@ -4993,10 +4985,10 @@ packages:
 specifiers:
   '@jest-runner/electron': ^2.0.2
   '@types/jest': ^24.0.15
-  '@types/ws': ^6.0.1
+  '@types/node': ^12.0.10
   '@yume-chan/async-operation-manager': ^1.0.1
   '@yume-chan/koshare-router': ^1.0.3
-  '@yume-chan/multi-map': ^1.0.1
+  '@yume-chan/multi-map': ^1.0.2
   electron: ^5.0.5
   jest: ^24.8.0
   ts-jest: ^24.0.2
