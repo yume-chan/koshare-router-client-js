@@ -1,18 +1,96 @@
-# typescript-package-scaffold
+# Koshare Router Client
 
-*DESCRIPTION TO BE FILLED*
+A Koshare Router client implementation for both browsers and Node.js
 
-- [typescript-package-scaffold](#typescript-package-scaffold)
-  - [API](#API)
+- [Koshare Router Client](#Koshare-Router-Client)
+  - [What's Koshare Router](#Whats-Koshare-Router)
+  - [Protocol Specification](#Protocol-Specification)
+  - [Install](#Install)
+  - [API Docs](#API-Docs)
+    - [prefix](#prefix)
+    - [Example](#Example)
+    - [Reconnect Client](#Reconnect-Client)
   - [Development](#Development)
     - [Install dependencies:](#Install-dependencies)
     - [Testing](#Testing)
     - [Coverage](#Coverage)
   - [License](#License)
 
-## API
+## What's Koshare Router
 
-*TO BE FILLED*
+Koshare Router is a simple publish/subscribe protocol based on WebSocket designed by [@gladkikhartem](https://github.com/gladkikhartem).
+
+## Protocol Specification
+
+Read [here](https://github.com/yume-chan/koshare-router-nodejs/blob/master/docs/protocol-specification.md).
+
+## Install
+
+``` shell
+npm i @yume-chan/koshare-router-client
+```
+
+For Node.js usage, add [ws](https://github.com/websockets/ws):
+
+``` shell
+npm i ws
+```
+
+## API Docs
+
+``` ts
+type ForwardPacketHandler<T> = (packet: ForwardPacket<T>) => void;
+
+export default class KoshareClient {
+    static connect(endpoint: string, prefix?: string): Promise<KoshareClient>;
+
+    subscribe<T extends object>(topic: string, handler: ForwardPacketHandler<T>): Promise<void>;
+
+    unsubscribe(topic: string): Promise<void>;
+    unsubscribe<T extends object>(topic: string, handler: ForwardPacketHandler<T>): Promise<void>;
+
+    broadcast<T extends object>(topic: string, body?: T): Promise<void>;
+    message<T extends object>(topic: string, destination: number, body?: T): Promise<void>;
+
+    close(): void;
+}
+```
+
+### prefix
+
+Call `connect()` with `prefix` will append prefix to all topics automatically, helping avoid collsions with other users.
+
+### Example
+
+``` ts
+import KoshareClient from '@yume-chan/koshare-router-client';
+
+(async () => {
+    const echo = await KoshareClient.connect('wss://chensi.moe/koshare');
+    await echo.subscribe('echo', async (packet) => {
+        await echo.message('echo', packet.src, { ...packet, type: undefined, topic: undefined, src: undefined, dst: undefined });
+    });
+
+    const client = await KoshareClient.connect('wss://chensi.moe/koshare');
+    await client.subscribe('echo', (packet) => {
+        console.log(packet);
+    });
+    await client.broadcast('echo', { content: 'test' });
+
+    echo.close();
+    client.close();
+})();
+```
+
+### Reconnect Client
+
+The `KoshareReconnectClient`, extends `KoshareClient`, will automatically reconnect if it got disconnected.
+
+The usage is same as `KoshareClient`.
+
+``` ts
+import { KoshareReconnectClient } from '@yume-chan/koshare-router-client';
+```
 
 ## Development
 

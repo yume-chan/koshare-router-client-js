@@ -1,7 +1,7 @@
 {
-  "name": "typescript-package-scaffold",
+  "name": "@yume-chan/koshare-router-client",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Koshare Router client implementation for both browsers and Node.js",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "directories": {
@@ -15,18 +15,29 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yume-chan/typescript-package-scaffold.git"
+    "url": "git+https://github.com/yume-chan/koshare-router-client.git"
   },
   "author": "Simon Chan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yume-chan/typescript-package-scaffold/issues"
+    "url": "https://github.com/yume-chan/koshare-router-client/issues"
   },
-  "homepage": "https://github.com/yume-chan/typescript-package-scaffold#readme",
+  "homepage": "https://github.com/yume-chan/koshare-router-client#readme",
   "devDependencies": {
+    "@jest-runner/electron": "^2.0.2",
     "@types/jest": "^24.0.15",
+    "@yume-chan/koshare-router": "^1.0.3",
+    "electron": "^5.0.5",
     "jest": "^24.8.0",
     "ts-jest": "^24.0.2",
-    "typescript": "^3.5.2"
+    "typescript": "^3.5.2",
+    "ws": "^7.0.1"
+  },
+  "dependencies": {
+    "@yume-chan/async-operation-manager": "^1.0.1",
+    "@yume-chan/multi-map": "^1.0.1"
+  },
+  "peerDependencies": {
+    "ws": "^7.0.1"
   }
 }
