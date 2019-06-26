@@ -49,7 +49,7 @@ describe('client', () => {
         })
 
         it('should throw when error', () => {
-            return expect(KoshareClient.connect('', 'ws://localhost:7999')).rejects.toThrow();
+            return expect(KoshareClient.connect('ws://localhost:7999')).rejects.toThrow();
         });
     });
 
