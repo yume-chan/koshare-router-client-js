@@ -1,5 +1,6 @@
 dependencies:
   '@yume-chan/async-operation-manager': 1.0.1
+  '@yume-chan/fallback-websocket': 1.0.0_ws@7.0.1
   '@yume-chan/multi-map': 1.0.2
 devDependencies:
   '@jest-runner/electron': 2.0.2_electron@5.0.5
@@ -1065,6 +1066,14 @@ packages:
   /@yume-chan/async-operation-manager/1.0.1:
     resolution:
       integrity: sha512-ju38Oa9HKwpr5WgpuASCWQFak/02XuF1S8dET7n2eKYMmdxnMXIJHM+eLWqpwFouqkHu7mkeeJavvBWXGz257Q==
+  /@yume-chan/fallback-websocket/1.0.0_ws@7.0.1:
+    dependencies:
+      ws: 7.0.1
+    dev: false
+    peerDependencies:
+      ws: ^7.0.1
+    resolution:
+      integrity: sha512-oKNxhvMUWJSzLNSr+ob/vOoyP9hfsHPikg+tMmtx2tyPaUbh2tjcNww0L10g+M+u76VPKkUR6E3awWhBcyIdEg==
   /@yume-chan/koshare-router/1.0.3:
     dependencies:
       '@yume-chan/async-operation-manager': 1.0.1
@@ -1221,7 +1230,6 @@ packages:
     resolution:
       integrity: sha512-+Ryf6g3BKoRc7jfp7ad8tM4TtMiaWvbF/1/sQcZPkkS7ag3D5nMBCe2UfOTONtAkaG0tO0ij3C5Lwmf1EiyjHg==
   /async-limiter/1.0.0:
-    dev: true
     resolution:
       integrity: sha512-jp/uFnooOiO+L211eZOoSyzpOITMXx1rBITauYykG3BRYPu8h0UcxsPNB04RR5vo4Tyz3+ay17tR6JVf9qzYWg==
   /asynckit/0.4.0:
@@ -4927,7 +4935,6 @@ packages:
   /ws/7.0.1:
     dependencies:
       async-limiter: 1.0.0
-    dev: true
     resolution:
       integrity: sha512-ILHfMbuqLJvnSgYXLgy4kMntroJpe8hT41dOVWM8bxRuw6TK4mgMp9VJUNsZTEc5Bh+Mbs0DJT4M0N+wBG9l9A==
   /xml-name-validator/3.0.0:
@@ -4987,6 +4994,7 @@ specifiers:
   '@types/jest': ^24.0.15
   '@types/node': ^12.0.10
   '@yume-chan/async-operation-manager': ^1.0.1
+  '@yume-chan/fallback-websocket': ^1.0.0
   '@yume-chan/koshare-router': ^1.0.3
   '@yume-chan/multi-map': ^1.0.2
   electron: ^5.0.5

@@ -1,7 +1,7 @@
 import AsyncOperationManager from '@yume-chan/async-operation-manager';
+import WebSocket from '@yume-chan/fallback-websocket';
 import MultiMap, { ReadonlyMultiMap } from '@yume-chan/multi-map';
 
-import WebSocket from './websocket';
 import { ServerPacket, PacketType, SubscribeSuccessResponsePacket, ForwardPacket } from './packet';
 
 type ForwardPacketHandler<T> = (packet: ForwardPacket<T>) => void;
