@@ -1,5 +1,7 @@
 # Koshare Router Client
 
+[![travis-ci](https://travis-ci.org/yume-chan/koshare-router-client-js.svg?branch=master)](https://travis-ci.org/yume-chan/koshare-router-client-js)
+
 A Koshare Router client implementation for both browsers and Node.js
 
 - [Koshare Router Client](#Koshare-Router-Client)
