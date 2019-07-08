@@ -1,6 +1,6 @@
 # Koshare Router Client
 
-[![travis-ci](https://travis-ci.org/yume-chan/koshare-router-client-js.svg?branch=master)](https://travis-ci.org/yume-chan/koshare-router-client-js)
+[![travis-ci](https://travis-ci.org/yume-chan/koshare-router-client-js.svg?branch=master)](https://travis-ci.org/yume-chan/koshare-router-client-js) [![Greenkeeper badge](https://badges.greenkeeper.io/yume-chan/koshare-router-client-js.svg)](https://greenkeeper.io/)
 
 A Koshare Router client implementation for both browsers and Node.js
 
