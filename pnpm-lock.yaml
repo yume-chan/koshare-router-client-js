@@ -1,17 +1,18 @@
 dependencies:
   '@yume-chan/async-operation-manager': 1.0.1
-  '@yume-chan/fallback-websocket': 1.0.0_ws@7.0.1
+  '@yume-chan/fallback-websocket': 1.0.0_ws@7.1.0
   '@yume-chan/multi-map': 1.0.2
 devDependencies:
   '@jest-runner/electron': 2.0.2_electron@5.0.5
   '@types/jest': 24.0.15
-  '@types/node': 12.6.0
+  '@types/node': 12.6.2
+  '@types/ws': 6.0.1
   '@yume-chan/koshare-router': 1.0.3
   electron: 5.0.5
   jest: 24.8.0
   ts-jest: 24.0.2_jest@24.8.0
-  typescript: 3.5.2
-  ws: 7.0.1
+  typescript: 3.5.3
+  ws: 7.1.0
 lockfileVersion: 5.1
 packages:
   /@babel/code-frame/7.0.0:
@@ -1020,6 +1021,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-CeBpmX1J8kWLcDEnI3Cl2Eo6RfbGvzUctA+CjZUhOKDFbLfcr7fc4usEqLNWetrlJd7RhAkyYe2czXop4fICpw==
+  /@types/events/3.0.0:
+    dev: true
+    resolution:
+      integrity: sha512-EaObqwIvayI5a8dCzhFrjKzVwKLxjoG9T6Ppd5CEo07LRKfQ8Yokw54r5+Wq7FaBQ+yXRvQAYPrHwya1/UFt9g==
   /@types/istanbul-lib-coverage/2.0.1:
     dev: true
     resolution:
@@ -1051,14 +1056,21 @@ packages:
     dev: true
     resolution:
       integrity: sha512-V8wj+w2YMNvGuhgl/MA5fmTxgjmVHVoasfIaxMMZJV6Y8Kk+Ydpi1z2whoShDCJ2BuNVoqH/h1hrygnBxkrw/Q==
-  /@types/node/12.6.0:
+  /@types/node/12.6.2:
     dev: true
     resolution:
-      integrity: sha512-dVeOVH/lhZ2Cki5Emh0aKeXUcWG1+EDTkqyzdgPe0ZjzgvBhzSFlogc6rm8uUd0I+XGK5fcp9DsMv5Wofe0/3w==
+      integrity: sha512-gojym4tX0FWeV2gsW4Xmzo5wxGjXGm550oVUII7f7G5o4BV6c7DBdiG1RRQd+y1bvqRyYtPfMK85UM95vsapqQ==
   /@types/stack-utils/1.0.1:
     dev: true
     resolution:
       integrity: sha512-l42BggppR6zLmpfU6fq9HEa2oGPEI8yrSPL3GITjfRInppYFahObbIQOQK3UGxEnyQpltZLaPe75046NOZQikw==
+  /@types/ws/6.0.1:
+    dependencies:
+      '@types/events': 3.0.0
+      '@types/node': 12.6.2
+    dev: true
+    resolution:
+      integrity: sha512-EzH8k1gyZ4xih/MaZTXwT2xOkPiIMSrhQ9b8wrlX88L0T02eYsddatQlwVFlEPyEqV0ChpdpNnE51QPH6NVT4Q==
   /@types/yargs/12.0.12:
     dev: true
     resolution:
@@ -1066,9 +1078,9 @@ packages:
   /@yume-chan/async-operation-manager/1.0.1:
     resolution:
       integrity: sha512-ju38Oa9HKwpr5WgpuASCWQFak/02XuF1S8dET7n2eKYMmdxnMXIJHM+eLWqpwFouqkHu7mkeeJavvBWXGz257Q==
-  /@yume-chan/fallback-websocket/1.0.0_ws@7.0.1:
+  /@yume-chan/fallback-websocket/1.0.0_ws@7.1.0:
     dependencies:
-      ws: 7.0.1
+      ws: 7.1.0
     dev: false
     peerDependencies:
       ws: ^7.0.1
@@ -4714,13 +4726,13 @@ packages:
     dev: true
     resolution:
       integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
-  /typescript/3.5.2:
+  /typescript/3.5.3:
     dev: true
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-7KxJovlYhTX5RaRbUdkAXN1KUZ8PwWlTzQdHV6xNqvuFOs7+WBo10TQUqT19Q/Jz2hk5v9TQDIhyLhhJY4p5AA==
+      integrity: sha512-ACzBtm/PhXBDId6a6sDJfroT2pOWt/oOnk4/dElG5G33ZL776N3Y6/6bKZJBFpd+b05F3Ct9qDjMeJmRWtE2/g==
   /uglify-js/3.6.0:
     dependencies:
       commander: 2.20.0
@@ -4935,8 +4947,14 @@ packages:
   /ws/7.0.1:
     dependencies:
       async-limiter: 1.0.0
+    dev: true
     resolution:
       integrity: sha512-ILHfMbuqLJvnSgYXLgy4kMntroJpe8hT41dOVWM8bxRuw6TK4mgMp9VJUNsZTEc5Bh+Mbs0DJT4M0N+wBG9l9A==
+  /ws/7.1.0:
+    dependencies:
+      async-limiter: 1.0.0
+    resolution:
+      integrity: sha512-Swie2C4fs7CkwlHu1glMePLYJJsWjzhl1vm3ZaLplD0h7OMkZyZ6kLTB/OagiU923bZrPFXuDTeEqaEN4NWG4g==
   /xml-name-validator/3.0.0:
     dev: true
     resolution:
@@ -4992,7 +5010,8 @@ packages:
 specifiers:
   '@jest-runner/electron': ^2.0.2
   '@types/jest': ^24.0.15
-  '@types/node': ^12.6.0
+  '@types/node': 12.6.2
+  '@types/ws': ^6.0.1
   '@yume-chan/async-operation-manager': ^1.0.1
   '@yume-chan/fallback-websocket': ^1.0.0
   '@yume-chan/koshare-router': ^1.0.3
@@ -5000,5 +5019,5 @@ specifiers:
   electron: ^5.0.5
   jest: ^24.8.0
   ts-jest: ^24.0.2
-  typescript: ^3.5.2
-  ws: ^7.0.1
+  typescript: 3.5.3
+  ws: 7.1.0
