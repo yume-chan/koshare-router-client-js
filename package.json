@@ -1,6 +1,6 @@
 {
   "name": "@yume-chan/koshare-router-client",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Koshare Router client implementation for both browsers and Node.js",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
