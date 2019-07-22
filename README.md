@@ -5,19 +5,19 @@
 
 A Koshare Router client implementation for both browsers and Node.js
 
-- [Koshare Router Client](#Koshare-Router-Client)
-  - [What's Koshare Router](#Whats-Koshare-Router)
-  - [Protocol Specification](#Protocol-Specification)
-  - [Install](#Install)
-  - [API Docs](#API-Docs)
+- [Koshare Router Client](#koshare-router-client)
+  - [What's Koshare Router](#whats-koshare-router)
+  - [Protocol Specification](#protocol-specification)
+  - [Install](#install)
+    - [Node.js](#nodejs)
+  - [API](#api)
     - [prefix](#prefix)
-    - [Example](#Example)
-    - [Reconnect Client](#Reconnect-Client)
-  - [Development](#Development)
-    - [Install dependencies:](#Install-dependencies)
-    - [Testing](#Testing)
-    - [Coverage](#Coverage)
-  - [License](#License)
+  - [Usage](#usage)
+  - [Development](#development)
+    - [Install dependencies](#install-dependencies)
+    - [Testing](#testing)
+    - [Coverage](#coverage)
+  - [License](#license)
 
 ## What's Koshare Router
 
@@ -33,13 +33,15 @@ Read [here](https://github.com/yume-chan/koshare-router-nodejs/blob/master/docs/
 npm i @yume-chan/koshare-router-client
 ```
 
-For Node.js usage, add [ws](https://github.com/websockets/ws):
+### Node.js
+
+`ws` is a peer dependency, you need to install it separately for Node.js.
 
 ``` shell
-npm i ws
+npm install ws
 ```
 
-## API Docs
+## API
 
 ``` ts
 type ForwardPacketHandler<T> = (packet: ForwardPacket<T>) => void;
@@ -57,13 +59,19 @@ export default class KoshareClient {
 
     close(): void;
 }
+
+export class KoshareReconnectClient extends KoshareClient {
+    static connect(endpoint: string, prefix?: string): Promise<KoshareReconnectClient>;
+}
 ```
+
+The `KoshareReconnectClient` will try to reconnect automatically when connection is lost.
 
 ### prefix
 
 Call `connect()` with `prefix` will append prefix to all topics automatically, helping avoid collsions with other users.
 
-### Example
+## Usage
 
 ``` ts
 import KoshareClient from '@yume-chan/koshare-router-client';
@@ -85,21 +93,11 @@ import KoshareClient from '@yume-chan/koshare-router-client';
 })();
 ```
 
-### Reconnect Client
-
-The `KoshareReconnectClient`, extends `KoshareClient`, will automatically reconnect if it got disconnected.
-
-The usage is same as `KoshareClient`.
-
-``` ts
-import { KoshareReconnectClient } from '@yume-chan/koshare-router-client';
-```
-
 ## Development
 
 This project uses [pnpm](https://pnpm.js.org/) ([GitHub](https://github.com/pnpm/pnpm)) to manage dependency packages.
 
-### Install dependencies:
+### Install dependencies
 
 ``` shell
 pnpm i
