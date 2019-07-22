@@ -1,5 +1,5 @@
 import AsyncOperationManager from '@yume-chan/async-operation-manager';
-import WebSocket from '@yume-chan/fallback-websocket';
+import { connect as connectWebSocket } from '@yume-chan/fallback-websocket';
 import MultiMap, { ReadonlyMultiMap } from '@yume-chan/multi-map';
 
 import { ServerPacket, PacketType, SubscribeSuccessResponsePacket, ForwardPacket } from './packet';
@@ -8,43 +8,6 @@ type ForwardPacketHandler<T> = (packet: ForwardPacket<T>) => void;
 
 export interface AsyncOperationResponsePacket {
     id: number;
-}
-
-export type ExcludeCommon<T> = T extends { topic: string }
-    ? Pick<T, Exclude<keyof T, 'topic' | 'dst'>>
-    : T;
-
-function isErrorEvent(e: Event): e is ErrorEvent {
-    return 'error' in e;
-}
-
-export function connectWebSocket(endpoint: string): Promise<WebSocket> {
-    return new Promise((resolve, reject) => {
-        function handleOpen() {
-            socket.removeEventListener('open', handleOpen);
-            socket.removeEventListener('error', handleError);
-
-            resolve(socket);
-        }
-
-        function handleError(e: Event) {
-            socket.removeEventListener('open', handleOpen);
-            socket.removeEventListener('error', handleError);
-
-            // ws give us an ErrorEvent with error object
-            // but browser doesn't give any detail about the error
-            if (isErrorEvent(e)) {
-                reject(e.error);
-            } else {
-                reject(new Error('the WebSocket connection cannot be established'));
-            }
-        }
-
-        const socket = new WebSocket(endpoint);
-
-        socket.addEventListener("open", handleOpen);
-        socket.addEventListener("error", handleError);
-    });
 }
 
 export default class KoshareClient {

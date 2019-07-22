@@ -1,4 +1,6 @@
-import KoshareClient, { connectWebSocket, AsyncOperationResponsePacket } from "./client";
+import { connect as connectWebSocket } from '@yume-chan/fallback-websocket';
+
+import KoshareClient, { AsyncOperationResponsePacket } from "./client";
 import { delay } from './util';
 import { PacketType } from './packet';
 
