@@ -25,7 +25,7 @@
   "homepage": "https://github.com/yume-chan/koshare-router-client#readme",
   "devDependencies": {
     "@jest-runner/electron": "^2.0.2",
-    "@types/jest": "^24.0.15",
+    "@types/jest": "^25.1.0",
     "@types/node": "^12.6.8",
     "@types/ws": "^7.2.0",
     "@yume-chan/koshare-router": "^1.0.3",
