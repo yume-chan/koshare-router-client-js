@@ -4,7 +4,7 @@ dependencies:
   '@yume-chan/multi-map': 1.0.2
 devDependencies:
   '@jest-runner/electron': 3.0.0_electron@8.2.5
-  '@types/jest': 24.9.1
+  '@types/jest': 25.2.1
   '@types/node': 13.13.5
   '@types/ws': 7.2.4
   '@yume-chan/koshare-router': 1.0.3
@@ -1387,12 +1387,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-UpYjBi8xefVChsCoBpKShdxTllC9pwISirfoZsUa2AAdQg/Jd2KQGtSbw+ya7GPo7x/wAPlH6JBhKhAsXUEZNA==
-  /@types/jest/24.9.1:
+  /@types/jest/25.2.1:
     dependencies:
-      jest-diff: 24.9.0
+      jest-diff: 25.5.0
+      pretty-format: 25.5.0
     dev: true
     resolution:
-      integrity: sha512-Fb38HkXSVA4L8fGKEZ6le5bB8r6MRWlOCZbVuWZcmOMSCd2wCYOwN1ibj8daIoV9naq7aaOZjrLCoCMptKU/4Q==
+      integrity: sha512-msra1bCaAeEdkSyA0CZ6gW1ukMIvZ5YoJkdXw/qhQdsuuDlFTcEUrUw8CLCPt2rVRUfXlClVvK2gvPs9IokZaA==
   /@types/node/12.12.38:
     dev: true
     resolution:
@@ -6232,7 +6233,7 @@ packages:
       integrity: sha1-x+sXyT4RLLEIb6bY5R+wZnt5pfk=
 specifiers:
   '@jest-runner/electron': 3.0.0
-  '@types/jest': 24.9.1
+  '@types/jest': 25.2.1
   '@types/node': 13.13.5
   '@types/ws': 7.2.4
   '@yume-chan/async-operation-manager': ^1.0.1
