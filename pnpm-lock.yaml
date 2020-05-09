@@ -10,7 +10,7 @@ devDependencies:
   '@yume-chan/koshare-router': 1.0.3
   electron: 8.2.5
   jest: 26.0.1
-  ts-jest: 25.5.0_jest@26.0.1+typescript@3.8.3
+  ts-jest: 25.5.1_jest@26.0.1+typescript@3.8.3
   typescript: 3.8.3
   ws: 7.2.5
 lockfileVersion: 5.1
@@ -1593,12 +1593,6 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-JWF7ocqNrp8u9oqpgV+wH5ftbt+cfvv+PTjOvKLT3AdYly/LmORARfEVT1iyjwN+4MqE5UmVKoAdIBqeoCHgLA==
-  /ansi-regex/4.1.0:
-    dev: true
-    engines:
-      node: '>=6'
-    resolution:
-      integrity: sha512-1apePfXM1UOSqw0o9IiFAovVz9M5S1Dg+4TrDwfMewQ6p/rmMueb7tWZjQ1rx4Loy1ArBggoqGpfqqdI4rondg==
   /ansi-regex/5.0.0:
     dev: true
     engines:
@@ -2349,12 +2343,6 @@ packages:
     optional: true
     resolution:
       integrity: sha512-ZIzRpLJrOj7jjP2miAtgqIfmzbxa4ZOr5jJc601zklsfEx9oTzmmj2nVpIPRpNlRTIh8lc1kyViIY7BWSGNmKw==
-  /diff-sequences/24.9.0:
-    dev: true
-    engines:
-      node: '>= 6'
-    resolution:
-      integrity: sha512-Dj6Wk3tWyTE+Fo1rW8v0Xhwk80um6yFYKbuAxc9c3EZxIHFDYwbi34Uk42u1CdnIiVorvt4RmlSDjIPyzGC2ew==
   /diff-sequences/25.2.6:
     dev: true
     engines:
@@ -3373,17 +3361,6 @@ packages:
       node: '>= 10.14.2'
     resolution:
       integrity: sha512-9mWKx2L1LFgOXlDsC4YSeavnblN6A4CPfXFiobq+YYLaBMymA/SczN7xYTSmLaEYHZOcB98UdoN4m5uNt6tztg==
-  /jest-diff/24.9.0:
-    dependencies:
-      chalk: 2.4.2
-      diff-sequences: 24.9.0
-      jest-get-type: 24.9.0
-      pretty-format: 24.9.0
-    dev: true
-    engines:
-      node: '>= 6'
-    resolution:
-      integrity: sha512-qMfrTs8AdJE2iqrTp0hzh7kTd2PQWrsFyj9tORoKmu32xjPjeE4NyjVRDz8ybYwqS2ik8N4hsIpiVTyFeo2lBQ==
   /jest-diff/25.5.0:
     dependencies:
       chalk: 3.0.0
@@ -3497,12 +3474,6 @@ packages:
       node: '>= 10.14.2'
     resolution:
       integrity: sha512-4FRBWcSn5yVo0KtNav7+5NH5Z/tEgDLp7VRQVS5tCouWORxj+nI+1tOLutM07Zb2Qi7ja+HEDoOUkjBSWZg/IQ==
-  /jest-get-type/24.9.0:
-    dev: true
-    engines:
-      node: '>= 6'
-    resolution:
-      integrity: sha512-lUseMzAley4LhIcpSP9Jf+fTrQ4a1yHQwLNeeVa2cEmbCGeoZAtYPOIv8JaxLD/sUpKxetKGP+gsHl8f8TSj8Q==
   /jest-get-type/25.2.6:
     dev: true
     engines:
@@ -4946,17 +4917,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-s7PoyDv/II1ObgQunCbB9PdLmUcBZcnWOcxDh7O0N/UwDEsHyqkW+Qh28jW+mVuCdx7gLB0BotYI1Y6uI9iyew==
-  /pretty-format/24.9.0:
-    dependencies:
-      '@jest/types': 24.9.0
-      ansi-regex: 4.1.0
-      ansi-styles: 3.2.1
-      react-is: 16.13.1
-    dev: true
-    engines:
-      node: '>= 6'
-    resolution:
-      integrity: sha512-00ZMZUiHaJrNfk33guavqgvfJS30sLYf0f8+Srklv0AMPodGGHcoHgksZ3OThYnIvOd+8yMCn0YiEOogjlgsnA==
   /pretty-format/25.5.0:
     dependencies:
       '@jest/types': 25.5.0
@@ -5827,7 +5787,7 @@ packages:
     dev: true
     resolution:
       integrity: sha1-QFkjkJWS1W94pYGENLC3hInKXys=
-  /ts-jest/25.5.0_jest@26.0.1+typescript@3.8.3:
+  /ts-jest/25.5.1_jest@26.0.1+typescript@3.8.3:
     dependencies:
       bs-logger: 0.2.6
       buffer-from: 1.1.1
@@ -5849,7 +5809,7 @@ packages:
       jest: '>=25 <26'
       typescript: '>=3.4 <4.0'
     resolution:
-      integrity: sha512-govrjbOk1UEzcJ5cX5k8X8IUtFuP3lp3mrF3ZuKtCdAOQzdeCM7qualhb/U8s8SWFwEDutOqfF5PLkJ+oaYD4w==
+      integrity: sha512-kHEUlZMK8fn8vkxDjwbHlxXRB9dHYpyzqKIGDNxbzs+Rz+ssNDSDNusEK8Fk/sDd4xE6iKoQLfFkFVaskmTJyw==
   /tunnel-agent/0.6.0:
     dependencies:
       safe-buffer: 5.2.0
@@ -6239,6 +6199,6 @@ specifiers:
   '@yume-chan/multi-map': ^1.0.2
   electron: 8.2.5
   jest: 26.0.1
-  ts-jest: 25.5.0
+  ts-jest: 25.5.1
   typescript: 3.8.3
   ws: 7.2.5
