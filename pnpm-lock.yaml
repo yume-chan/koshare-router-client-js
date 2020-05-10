@@ -1,6 +1,6 @@
 dependencies:
   '@yume-chan/async-operation-manager': 1.0.1
-  '@yume-chan/fallback-websocket': 1.0.2_ws@7.2.5
+  '@yume-chan/fallback-websocket': 1.0.2_ws@7.3.0
   '@yume-chan/multi-map': 1.0.2
 devDependencies:
   '@jest-runner/electron': 3.0.0_electron@8.2.5
@@ -12,7 +12,7 @@ devDependencies:
   jest: 26.0.1
   ts-jest: 25.5.1_jest@26.0.1+typescript@3.8.3
   typescript: 3.8.3
-  ws: 7.2.5
+  ws: 7.3.0
 lockfileVersion: 5.1
 packages:
   /@babel/code-frame/7.8.3:
@@ -1512,9 +1512,9 @@ packages:
   /@yume-chan/async-operation-manager/1.0.1:
     resolution:
       integrity: sha512-ju38Oa9HKwpr5WgpuASCWQFak/02XuF1S8dET7n2eKYMmdxnMXIJHM+eLWqpwFouqkHu7mkeeJavvBWXGz257Q==
-  /@yume-chan/fallback-websocket/1.0.2_ws@7.2.5:
+  /@yume-chan/fallback-websocket/1.0.2_ws@7.3.0:
     dependencies:
-      ws: 7.2.5
+      ws: 7.3.0
     dev: false
     peerDependencies:
       ws: ^7.0.0
@@ -6130,6 +6130,7 @@ packages:
     resolution:
       integrity: sha512-AvHcyZ5JnSfq3ioSyjrBkH9yW4m7Ayk8/9My/DD9onKeu/94fwrMocemO2QAJFAlnnDN+ZDS+ZjAR5ua1/PV/Q==
   /ws/7.2.5:
+    dev: true
     engines:
       node: '>=8.3.0'
     peerDependencies:
@@ -6142,6 +6143,19 @@ packages:
         optional: true
     resolution:
       integrity: sha512-C34cIU4+DB2vMyAbmEKossWq2ZQDr6QEyuuCzWrM9zfw1sGc0mYiJ0UnG9zzNykt49C2Fi34hvr2vssFQRS6EA==
+  /ws/7.3.0:
+    engines:
+      node: '>=8.3.0'
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: ^5.0.2
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+    resolution:
+      integrity: sha512-iFtXzngZVXPGgpTlP1rBqsUK82p9tKqsWRPg5L56egiljujJT3vGAYnHANvFxBieXrTFavhzhxW52jnaWV+w2w==
   /xml-name-validator/3.0.0:
     dev: true
     resolution:
@@ -6201,4 +6215,4 @@ specifiers:
   jest: 26.0.1
   ts-jest: 25.5.1
   typescript: 3.8.3
-  ws: 7.2.5
+  ws: 7.3.0
