@@ -27,7 +27,7 @@
     "@jest-runner/electron": "3.0.0",
     "@types/jest": "25.2.3",
     "@types/node": "13.13.9",
-    "@types/ws": "7.2.4",
+    "@types/ws": "7.2.5",
     "@yume-chan/koshare-router": "1.0.3",
     "electron": "9.0.2",
     "jest": "26.0.1",
