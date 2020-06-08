@@ -5,7 +5,7 @@ dependencies:
 devDependencies:
   '@jest-runner/electron': 3.0.0_electron@9.0.2
   '@types/jest': 25.2.3
-  '@types/node': 13.13.10
+  '@types/node': 13.13.11
   '@types/ws': 7.2.5
   '@yume-chan/koshare-router': 1.0.3
   electron: 9.0.2
@@ -1467,10 +1467,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-pADGfwnDkr6zagDwEiCVE4yQrv7XDkoeVa4OfA9Ju/zRTk6YNDLGtQbkdL4/56mCQQCs4AhNrBIag6jrp7ZuOg==
-  /@types/node/13.13.10:
+  /@types/node/13.13.11:
     dev: true
     resolution:
-      integrity: sha512-J+FbkhLTcFstD7E5mVZDjYxa1VppwT2HALE6H3n2AnBSP8uiCQk0Pyr6BkJcP38dFV9WecoVJRJmFnl9ikIW7Q==
+      integrity: sha512-FX7mIFKfnGCfq10DGWNhfCNxhACEeqH5uulT6wRRA1KEt7zgLe0HdrAd9/QQkObDqp2Z0KEV3OAmNgs0lTx5tQ==
   /@types/node/13.13.5:
     dev: true
     resolution:
@@ -6220,7 +6220,7 @@ packages:
 specifiers:
   '@jest-runner/electron': 3.0.0
   '@types/jest': 25.2.3
-  '@types/node': 13.13.10
+  '@types/node': 13.13.11
   '@types/ws': 7.2.5
   '@yume-chan/async-operation-manager': ^1.0.1
   '@yume-chan/fallback-websocket': 1.0.2
