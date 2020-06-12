@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@yume-chan/async-operation-manager": "^1.0.1",
-    "@yume-chan/fallback-websocket": "1.0.2",
+    "@yume-chan/fallback-websocket": "1.0.3",
     "@yume-chan/multi-map": "^1.0.2"
   },
   "peerDependencies": {

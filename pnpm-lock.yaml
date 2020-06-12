@@ -1,6 +1,6 @@
 dependencies:
   '@yume-chan/async-operation-manager': 1.0.1
-  '@yume-chan/fallback-websocket': 1.0.2_ws@7.3.0
+  '@yume-chan/fallback-websocket': 1.0.3_ws@7.3.0
   '@yume-chan/multi-map': 1.0.2
 devDependencies:
   '@jest-runner/electron': 3.0.0_electron@9.0.2
@@ -1520,14 +1520,14 @@ packages:
   /@yume-chan/async-operation-manager/1.0.1:
     resolution:
       integrity: sha512-ju38Oa9HKwpr5WgpuASCWQFak/02XuF1S8dET7n2eKYMmdxnMXIJHM+eLWqpwFouqkHu7mkeeJavvBWXGz257Q==
-  /@yume-chan/fallback-websocket/1.0.2_ws@7.3.0:
+  /@yume-chan/fallback-websocket/1.0.3_ws@7.3.0:
     dependencies:
       ws: 7.3.0
     dev: false
     peerDependencies:
       ws: ^7.0.0
     resolution:
-      integrity: sha512-1gxrv+NoFXhm4a4UO4o/kj93YE3v+75oBlOp8nzQsvW4Tx955gRnA3oH6m8iVdS5AP6Q8dUkmlKlrPQYqHCfuA==
+      integrity: sha512-NwJyzQj2q3f3xDHeG/CXbdbT4toNOqKh87vwlZTiJpR8aKnCi/ulNMSND+S88/5gwF+ulClWFa3LeyefC715+w==
   /@yume-chan/koshare-router/1.0.3:
     dependencies:
       '@yume-chan/async-operation-manager': 1.0.1
@@ -6223,7 +6223,7 @@ specifiers:
   '@types/node': 13.13.11
   '@types/ws': 7.2.5
   '@yume-chan/async-operation-manager': ^1.0.1
-  '@yume-chan/fallback-websocket': 1.0.2
+  '@yume-chan/fallback-websocket': 1.0.3
   '@yume-chan/koshare-router': 1.0.3
   '@yume-chan/multi-map': ^1.0.2
   electron: 9.0.2
