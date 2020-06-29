@@ -6,7 +6,7 @@ devDependencies:
   '@jest-runner/electron': 3.0.0_electron@9.0.5
   '@types/jest': 26.0.2
   '@types/node': 13.13.12
-  '@types/ws': 7.2.5
+  '@types/ws': 7.2.6
   '@yume-chan/koshare-router': 1.0.3
   electron: 9.0.5
   jest: 26.1.0
@@ -1475,10 +1475,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-3ySmiBYJPqgjiHA7oEaIo2Rzz0HrOZ7yrNO5HWyaE5q0lQ3BppDZ3N53Miz8bw2I7gh1/zir2MGVZBvpb1zq9g==
-  /@types/node/13.13.9:
-    dev: true
-    resolution:
-      integrity: sha512-EPZBIGed5gNnfWCiwEIwTE2Jdg4813odnG8iNPMQGrqVxrI+wL68SPtPeCX+ZxGBaA6pKAVc6jaKgP/Q0QzfdQ==
   /@types/normalize-package-data/2.4.0:
     dev: true
     resolution:
@@ -1495,12 +1491,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-l42BggppR6zLmpfU6fq9HEa2oGPEI8yrSPL3GITjfRInppYFahObbIQOQK3UGxEnyQpltZLaPe75046NOZQikw==
-  /@types/ws/7.2.5:
+  /@types/ws/7.2.6:
     dependencies:
-      '@types/node': 13.13.9
+      '@types/node': 13.13.12
     dev: true
     resolution:
-      integrity: sha512-4UEih9BI1nBKii385G9id1oFrSkLcClbwtDfcYj8HJLQqZVAtb/42vXVrYvRWCcufNF/a+rZD3MxNwghA7UmCg==
+      integrity: sha512-Q07IrQUSNpr+cXU4E4LtkSIBPie5GLZyyMC1QtQYRLWz701+XcoVygGUZgvLqElq1nU4ICldMYPnexlBsg3dqQ==
   /@types/yargs-parser/15.0.0:
     dev: true
     resolution:
@@ -6233,7 +6229,7 @@ specifiers:
   '@jest-runner/electron': 3.0.0
   '@types/jest': 26.0.2
   '@types/node': 13.13.12
-  '@types/ws': 7.2.5
+  '@types/ws': 7.2.6
   '@yume-chan/async-operation-manager': ^1.0.1
   '@yume-chan/fallback-websocket': 1.0.3
   '@yume-chan/koshare-router': 1.0.3
