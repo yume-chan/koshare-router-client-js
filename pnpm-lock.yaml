@@ -10,8 +10,8 @@ devDependencies:
   '@yume-chan/koshare-router': 1.0.3
   electron: 9.0.5
   jest: 26.1.0
-  ts-jest: 26.1.1_jest@26.1.0+typescript@3.9.6
-  typescript: 3.9.6
+  ts-jest: 26.1.1_jest@26.1.0+typescript@3.9.7
+  typescript: 3.9.7
   ws: 7.3.1
 lockfileVersion: 5.1
 packages:
@@ -5810,7 +5810,7 @@ packages:
     dev: true
     resolution:
       integrity: sha1-QFkjkJWS1W94pYGENLC3hInKXys=
-  /ts-jest/26.1.1_jest@26.1.0+typescript@3.9.6:
+  /ts-jest/26.1.1_jest@26.1.0+typescript@3.9.7:
     dependencies:
       bs-logger: 0.2.6
       buffer-from: 1.1.1
@@ -5822,7 +5822,7 @@ packages:
       micromatch: 4.0.2
       mkdirp: 1.0.4
       semver: 7.3.2
-      typescript: 3.9.6
+      typescript: 3.9.7
       yargs-parser: 18.1.3
     dev: true
     engines:
@@ -5892,13 +5892,13 @@ packages:
     dev: true
     resolution:
       integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
-  /typescript/3.9.6:
+  /typescript/3.9.7:
     dev: true
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-Pspx3oKAPJtjNwE92YS05HQoY7z2SFyOpHo9MqJor3BXAGNaPUs83CuVp9VISFkSjyRfiTpmKuAYGJB7S7hOxw==
+      integrity: sha512-BLbiRkiBzAwsjut4x/dsibSTB6yWpwT5qWmC2OfuCg3GgVQCSgMs4vEctYPhsaGtd0AeuuHMkjZ2h2WG8MSzRw==
   /unicode-canonical-property-names-ecmascript/1.0.4:
     dev: true
     engines:
@@ -6251,5 +6251,5 @@ specifiers:
   electron: 9.0.5
   jest: 26.1.0
   ts-jest: 26.1.1
-  typescript: 3.9.6
+  typescript: 3.9.7
   ws: 7.3.1
