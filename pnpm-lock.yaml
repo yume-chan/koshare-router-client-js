@@ -10,7 +10,7 @@ devDependencies:
   '@yume-chan/koshare-router': 1.0.3
   electron: 9.0.5
   jest: 26.1.0
-  ts-jest: 26.1.1_jest@26.1.0+typescript@3.9.7
+  ts-jest: 26.1.4_jest@26.1.0+typescript@3.9.7
   typescript: 3.9.7
   ws: 7.3.1
 lockfileVersion: 5.1
@@ -5810,16 +5810,16 @@ packages:
     dev: true
     resolution:
       integrity: sha1-QFkjkJWS1W94pYGENLC3hInKXys=
-  /ts-jest/26.1.1_jest@26.1.0+typescript@3.9.7:
+  /ts-jest/26.1.4_jest@26.1.0+typescript@3.9.7:
     dependencies:
       bs-logger: 0.2.6
       buffer-from: 1.1.1
       fast-json-stable-stringify: 2.1.0
       jest: 26.1.0
+      jest-util: 26.1.0
       json5: 2.1.3
       lodash.memoize: 4.1.2
       make-error: 1.3.6
-      micromatch: 4.0.2
       mkdirp: 1.0.4
       semver: 7.3.2
       typescript: 3.9.7
@@ -5832,7 +5832,7 @@ packages:
       jest: '>=26 <27'
       typescript: '>=3.8 <4.0'
     resolution:
-      integrity: sha512-Lk/357quLg5jJFyBQLnSbhycnB3FPe+e9i7ahxokyXxAYoB0q1pPmqxxRPYr4smJic1Rjcf7MXDBhZWgxlli0A==
+      integrity: sha512-Nd7diUX6NZWfWq6FYyvcIPR/c7GbEF75fH1R6coOp3fbNzbRJBZZAn0ueVS0r8r9ral1VcrpneAFAwB3TsVS1Q==
   /tunnel-agent/0.6.0:
     dependencies:
       safe-buffer: 5.2.0
@@ -6181,6 +6181,7 @@ packages:
     resolution:
       integrity: sha512-iFtXzngZVXPGgpTlP1rBqsUK82p9tKqsWRPg5L56egiljujJT3vGAYnHANvFxBieXrTFavhzhxW52jnaWV+w2w==
   /ws/7.3.1:
+    dev: true
     engines:
       node: '>=8.3.0'
     peerDependencies:
@@ -6250,6 +6251,6 @@ specifiers:
   '@yume-chan/multi-map': ^1.0.2
   electron: 9.0.5
   jest: 26.1.0
-  ts-jest: 26.1.1
+  ts-jest: 26.1.4
   typescript: 3.9.7
   ws: 7.3.1
