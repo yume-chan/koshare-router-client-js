@@ -29,7 +29,7 @@
     "@types/node": "13.13.12",
     "@types/ws": "7.2.6",
     "@yume-chan/koshare-router": "1.0.3",
-    "electron": "10.1.3",
+    "electron": "10.1.4",
     "jest": "26.2.2",
     "ts-jest": "26.1.4",
     "typescript": "4.0.3",
