@@ -26,7 +26,7 @@
   "devDependencies": {
     "@jest-runner/electron": "3.0.0",
     "@types/jest": "26.0.9",
-    "@types/node": "13.13.12",
+    "@types/node": "13.13.27",
     "@types/ws": "7.2.6",
     "@yume-chan/koshare-router": "1.0.3",
     "electron": "10.1.3",
