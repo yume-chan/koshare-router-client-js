@@ -116,7 +116,7 @@ export default class KoshareClient {
         const forbiddenKeys = ['id'];
         this.checkMessageBody(forbiddenKeys, body);
 
-        const { id, promise } = this._operationManager.add<ServerPacket<T>>();
+        const [id, promise] = this._operationManager.add<ServerPacket<T>>();
         await this.send(type, topic, { id, ...body });
         return await promise;
     }
