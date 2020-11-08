@@ -10,7 +10,7 @@ devDependencies:
   '@yume-chan/koshare-router': 1.0.3
   electron: 10.1.4
   jest: 26.6.0
-  ts-jest: 26.4.1_jest@26.6.0+typescript@4.0.5
+  ts-jest: 26.4.4_jest@26.6.0+typescript@4.0.5
   typescript: 4.0.5
   ws: 7.3.1
 lockfileVersion: 5.2
@@ -1436,7 +1436,7 @@ packages:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.3
       '@types/istanbul-reports': 3.0.0
-      '@types/node': 14.14.0
+      '@types/node': 14.14.5
       '@types/yargs': 15.0.9
       chalk: 4.1.0
     dev: true
@@ -4140,7 +4140,7 @@ packages:
   /jest-util/26.6.0:
     dependencies:
       '@jest/types': 26.6.0
-      '@types/node': 14.14.0
+      '@types/node': 14.14.5
       chalk: 4.1.0
       graceful-fs: 4.2.4
       is-ci: 2.0.0
@@ -5947,7 +5947,7 @@ packages:
     dev: true
     resolution:
       integrity: sha1-QFkjkJWS1W94pYGENLC3hInKXys=
-  /ts-jest/26.4.1_jest@26.6.0+typescript@4.0.5:
+  /ts-jest/26.4.4_jest@26.6.0+typescript@4.0.5:
     dependencies:
       '@types/jest': 26.0.15
       bs-logger: 0.2.6
@@ -5970,7 +5970,7 @@ packages:
       jest: '>=26 <27'
       typescript: '>=3.8 <5.0'
     resolution:
-      integrity: sha512-F4aFq01aS6mnAAa0DljNmKr/Kk9y4HVZ1m6/rtJ0ED56cuxINGq3Q9eVAh+z5vcYKe5qnTMvv90vE8vUMFxomg==
+      integrity: sha512-3lFWKbLxJm34QxyVNNCgXX1u4o/RV0myvA2y2Bxm46iGIjKlaY0own9gIckbjZJPn+WaJEnfPPJ20HHGpoq4yg==
   /tunnel-agent/0.6.0:
     dependencies:
       safe-buffer: 5.2.1
@@ -6374,6 +6374,6 @@ specifiers:
   '@yume-chan/multi-map': ^1.0.2
   electron: 10.1.4
   jest: 26.6.0
-  ts-jest: 26.4.1
+  ts-jest: 26.4.4
   typescript: 4.0.5
   ws: 7.3.1
