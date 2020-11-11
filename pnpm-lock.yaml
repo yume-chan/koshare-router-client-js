@@ -3,12 +3,12 @@ dependencies:
   '@yume-chan/fallback-websocket': 1.0.3_ws@7.4.0
   '@yume-chan/multi-map': 1.0.2
 devDependencies:
-  '@jest-runner/electron': 3.0.0_electron@10.1.4
+  '@jest-runner/electron': 3.0.0_electron@10.1.5
   '@types/jest': 26.0.15
   '@types/node': 14.14.7
   '@types/ws': 7.4.0
   '@yume-chan/koshare-router': 1.0.3
-  electron: 10.1.4
+  electron: 10.1.5
   jest: 26.6.0
   ts-jest: 26.4.4_jest@26.6.0+typescript@4.0.5
   typescript: 4.0.5
@@ -1082,11 +1082,11 @@ packages:
     dev: true
     resolution:
       integrity: sha512-frsV83vLDNEYvBcoUa5aizV3JyG8GPTB/eUN9MhX+0rAuP2H0tFceoNj16evufDsNFJY9VKlTkZZUY5tfmiGcw==
-  /@jest-runner/electron/3.0.0_electron@10.1.4:
+  /@jest-runner/electron/3.0.0_electron@10.1.5:
     dependencies:
       '@jest-runner/core': 3.0.0
       '@jest-runner/rpc': 3.0.0
-      electron: 10.1.4
+      electron: 10.1.5
       jest-haste-map: 25.5.1
       jest-mock: 25.5.0
       jest-runner: 25.5.4
@@ -2489,7 +2489,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-0nCJ7cSqnkMC+kUuPs0YgklFHraWGl/xHqtZWWtOeVtyi+YqkoAOMGuZQad43DscXCQI/yizcTa3u6B5r+BLww==
-  /electron/10.1.4:
+  /electron/10.1.5:
     dependencies:
       '@electron/get': 1.12.2
       '@types/node': 12.12.69
@@ -2500,7 +2500,7 @@ packages:
     hasBin: true
     requiresBuild: true
     resolution:
-      integrity: sha512-5wiiGsif8jd1lS3Qhe9j8oQvUMnoWCvqBwYzzn+BGXGDq8aN8oTdM+j/2NY35Ktt3JrJdjKWcu9b7pDo8kNjbw==
+      integrity: sha512-fys/KnEfJq05TtMij+lFvLuKkuVH030CHYx03iZrW5DNNLwjE6cW3pysJ420lB0FRSfPjTHBMu2eVCf5TG71zQ==
   /emittery/0.7.2:
     dev: true
     engines:
@@ -6390,7 +6390,7 @@ specifiers:
   '@yume-chan/fallback-websocket': 1.0.3
   '@yume-chan/koshare-router': 1.0.3
   '@yume-chan/multi-map': ^1.0.2
-  electron: 10.1.4
+  electron: 10.1.5
   jest: 26.6.0
   ts-jest: 26.4.4
   typescript: 4.0.5
