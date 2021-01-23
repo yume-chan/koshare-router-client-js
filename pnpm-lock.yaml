@@ -3,12 +3,12 @@ dependencies:
   '@yume-chan/fallback-websocket': 1.0.3_ws@7.4.0
   '@yume-chan/multi-map': 1.0.2
 devDependencies:
-  '@jest-runner/electron': 3.0.0_electron@10.1.5
+  '@jest-runner/electron': 3.0.0_electron@11.2.1
   '@types/jest': 26.0.15
   '@types/node': 14.14.10
   '@types/ws': 7.4.0
   '@yume-chan/koshare-router': 1.0.3
-  electron: 10.1.5
+  electron: 11.2.1
   jest: 26.6.0
   ts-jest: 26.4.4_jest@26.6.0+typescript@4.1.2
   typescript: 4.1.2
@@ -1082,11 +1082,11 @@ packages:
     dev: true
     resolution:
       integrity: sha512-frsV83vLDNEYvBcoUa5aizV3JyG8GPTB/eUN9MhX+0rAuP2H0tFceoNj16evufDsNFJY9VKlTkZZUY5tfmiGcw==
-  /@jest-runner/electron/3.0.0_electron@10.1.5:
+  /@jest-runner/electron/3.0.0_electron@11.2.1:
     dependencies:
       '@jest-runner/core': 3.0.0
       '@jest-runner/rpc': 3.0.0
-      electron: 10.1.5
+      electron: 11.2.1
       jest-haste-map: 25.5.1
       jest-mock: 25.5.0
       jest-runner: 25.5.4
@@ -2493,7 +2493,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-0nCJ7cSqnkMC+kUuPs0YgklFHraWGl/xHqtZWWtOeVtyi+YqkoAOMGuZQad43DscXCQI/yizcTa3u6B5r+BLww==
-  /electron/10.1.5:
+  /electron/11.2.1:
     dependencies:
       '@electron/get': 1.12.2
       '@types/node': 12.12.69
@@ -2504,7 +2504,7 @@ packages:
     hasBin: true
     requiresBuild: true
     resolution:
-      integrity: sha512-fys/KnEfJq05TtMij+lFvLuKkuVH030CHYx03iZrW5DNNLwjE6cW3pysJ420lB0FRSfPjTHBMu2eVCf5TG71zQ==
+      integrity: sha512-Im1y29Bnil+Nzs+FCTq01J1OtLbs+2ZGLLllaqX/9n5GgpdtDmZhS/++JHBsYZ+4+0n7asO+JKQgJD+CqPClzg==
   /emittery/0.7.2:
     dev: true
     engines:
@@ -3183,6 +3183,7 @@ packages:
     resolution:
       integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
   /ini/1.3.5:
+    deprecated: Please update to ini >=1.3.6 to avoid a prototype pollution issue
     dev: true
     optional: true
     resolution:
@@ -5287,7 +5288,7 @@ packages:
       request-promise-core: 1.1.4_request@2.88.2
       stealthy-require: 1.1.1
       tough-cookie: 2.5.0
-    deprecated: 'request-promise-native has been deprecated because it extends the now deprecated request package, see https://github.com/request/request/issues/3142'
+    deprecated: request-promise-native has been deprecated because it extends the now deprecated request package, see https://github.com/request/request/issues/3142
     dev: true
     engines:
       node: '>=0.12.0'
@@ -5317,7 +5318,7 @@ packages:
       tough-cookie: 2.5.0
       tunnel-agent: 0.6.0
       uuid: 3.4.0
-    deprecated: 'request has been deprecated, see https://github.com/request/request/issues/3142'
+    deprecated: request has been deprecated, see https://github.com/request/request/issues/3142
     dev: true
     engines:
       node: '>= 6'
@@ -5348,7 +5349,7 @@ packages:
     resolution:
       integrity: sha512-qYg9KP24dD5qka9J47d0aVky0N+b4fTU89LN9iDnjB5waksiC49rvMB0PrUJQGoTmH50XPiqOvAjDfaijGxYZw==
   /resolve-url/0.2.1:
-    deprecated: 'https://github.com/lydell/resolve-url#deprecated'
+    deprecated: https://github.com/lydell/resolve-url#deprecated
     dev: true
     resolution:
       integrity: sha1-LGN/53yJOv0qZj/iGqkIAGjiBSo=
@@ -6112,7 +6113,7 @@ packages:
     resolution:
       integrity: sha512-B0yRTzYdUCCn9n+F4+Gh4yIDtMQcaJsmYBDsTSG8g/OejKBodLQ2IHfN3bM7jUsRXndopT7OIXWdYqc1fjmV6g==
   /urix/0.1.0:
-    deprecated: 'Please see https://github.com/lydell/urix#deprecated'
+    deprecated: Please see https://github.com/lydell/urix#deprecated
     dev: true
     resolution:
       integrity: sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
@@ -6394,7 +6395,7 @@ specifiers:
   '@yume-chan/fallback-websocket': 1.0.3
   '@yume-chan/koshare-router': 1.0.3
   '@yume-chan/multi-map': ^1.0.2
-  electron: 10.1.5
+  electron: 11.2.1
   jest: 26.6.0
   ts-jest: 26.4.4
   typescript: 4.1.2
