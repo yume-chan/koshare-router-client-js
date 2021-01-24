@@ -44,4 +44,4 @@ jobs:
     - name: Run Headless test
       uses: GabrielBB/xvfb-action@v1
       with:
-        - run: pnpm test
+        run: pnpm test
