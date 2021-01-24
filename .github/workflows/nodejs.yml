@@ -40,4 +40,8 @@ jobs:
         run_install: true
 
     - run: pnpm run build --if-present
-    - run: pnpm test
+
+    - name: Run Headless test
+      uses: GabrielBB/xvfb-action@v1
+      with:
+      - run: pnpm test
