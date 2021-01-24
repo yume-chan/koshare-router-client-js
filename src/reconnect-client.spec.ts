@@ -1,9 +1,10 @@
 import { KoshareServer } from "@yume-chan/koshare-router";
 
-import { KoshareReconnectClient } from '../src';
-import { delay } from '../src/util';
+import { randomPort } from './__helpers__/util';
 
-import { randomPort } from './util';
+import KoshareReconnectClient from './reconnect-client';
+import { delay } from './util';
+
 
 describe('reconnect client', () => {
     let server!: KoshareServer;
@@ -49,4 +50,4 @@ describe('reconnect client', () => {
         expect(client).toHaveProperty('disconnected', false);
         expect(handlePacket).toBeCalledTimes(1);
     }, 10000);
-})
+});

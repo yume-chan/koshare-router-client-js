@@ -1,46 +1,54 @@
 {
-  "name": "@yume-chan/koshare-router-client",
-  "version": "1.0.2",
-  "description": "A Koshare Router client implementation for both browsers and Node.js",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "build": "tsc",
-    "test": "jest",
-    "coverage": "jest --coverage",
-    "prepublishOnly": "npm run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yume-chan/koshare-router-client.git"
-  },
-  "author": "Simon Chan",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/yume-chan/koshare-router-client/issues"
-  },
-  "homepage": "https://github.com/yume-chan/koshare-router-client#readme",
-  "devDependencies": {
-    "@jest-runner/electron": "3.0.0",
-    "@types/jest": "26.0.20",
-    "@types/node": "14.14.22",
-    "@types/ws": "7.4.0",
-    "@yume-chan/koshare-router": "1.0.3",
-    "electron": "11.2.1",
-    "jest": "26.6.3",
-    "ts-jest": "26.4.4",
-    "typescript": "4.1.3",
-    "ws": "7.4.2"
-  },
-  "dependencies": {
-    "@yume-chan/async-operation-manager": "2.1.4",
-    "@yume-chan/fallback-websocket": "1.0.3",
-    "@yume-chan/multi-map": "^1.0.2"
-  },
-  "peerDependencies": {
-    "ws": "^7.0.0"
-  }
+    "name": "@yume-chan/koshare-router-client",
+    "version": "1.0.3",
+    "description": "A Koshare Router client implementation for browsers and Node.js",
+    "keywords": [
+        "webrtc",
+        "websocket"
+    ],
+    "license": "MIT",
+    "author": {
+        "name": "Simon Chan",
+        "email": "cnsimonchan@live.com",
+        "url": "https://chensi.moe/blog"
+    },
+    "homepage": "https://github.com/yume-chan/koshare-router-client-js#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yume-chan/koshare-router-client-js.git"
+    },
+    "bugs": {
+        "url": "https://github.com/yume-chan/koshare-router-client-js/issues"
+    },
+    "main": "cjs/index.js",
+    "module": "esm/index.js",
+    "types": "dts/index.d.ts",
+    "scripts": {
+        "build": "rimraf {cjs,esm,dts} && tsc -b tsconfig.esm.json tsconfig.cjs.json",
+        "test": "jest",
+        "coverage": "jest --coverage",
+        "prepublishOnly": "npm run build"
+    },
+    "dependencies": {
+        "@yume-chan/async-operation-manager": "2.1.4",
+        "@yume-chan/fallback-websocket": "1.0.3",
+        "@yume-chan/multi-map": "^1.0.2",
+        "tslib": "2.0.3"
+    },
+    "devDependencies": {
+        "@jest-runner/electron": "3.0.0",
+        "@types/jest": "26.0.20",
+        "@types/node": "14.14.22",
+        "@types/ws": "7.4.0",
+        "@yume-chan/koshare-router": "1.0.3",
+        "electron": "11.2.1",
+        "jest": "26.6.3",
+        "rimraf": "3.0.2",
+        "ts-jest": "26.4.4",
+        "typescript": "4.1.3",
+        "ws": "7.4.2"
+    },
+    "peerDependencies": {
+        "ws": "^7.0.0"
+    }
 }

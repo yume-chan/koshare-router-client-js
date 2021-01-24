@@ -1,8 +1,12 @@
 # Koshare Router Client
 
 ![Node.js CI](https://github.com/yume-chan/koshare-router-client-js/workflows/Node.js%20CI/badge.svg)
+![license](https://img.shields.io/npm/l/@yume-chan/koshare-router-client)
+![npm type definitions](https://img.shields.io/npm/types/@yume-chan/koshare-router-client)
+[![npm version](https://img.shields.io/npm/v/@yume-chan/koshare-router-client)](https://www.npmjs.com/package/@yume-chan/koshare-router-client)
+![npm bundle size](https://img.shields.io/bundlephobia/min/@yume-chan/koshare-router-client)
 
-A Koshare Router client implementation for both browsers and Node.js
+A Koshare Router client implementation for browsers and Node.js
 
 - [What's Koshare Router](#whats-koshare-router)
 - [Protocol Specification](#protocol-specification)
@@ -19,7 +23,7 @@ A Koshare Router client implementation for both browsers and Node.js
 
 ## What's Koshare Router
 
-Koshare Router is a simple publish/subscribe protocol based on WebSocket designed by [@gladkikhartem](https://github.com/gladkikhartem).
+Koshare Router is a simple publish/subscribe protocol running on WebSocket, originally designed by [@gladkikhartem](https://github.com/gladkikhartem).
 
 ## Protocol Specification
 
@@ -33,7 +37,7 @@ npm i @yume-chan/koshare-router-client
 
 ### Node.js
 
-`ws` is a peer dependency, you need to install it separately for Node.js.
+`ws` is a peer dependency, so you need to install it manually for Node.js.
 
 ``` shell
 npm install ws

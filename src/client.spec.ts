@@ -1,10 +1,11 @@
 import { PromiseResolver } from '@yume-chan/async-operation-manager';
 import { KoshareServer } from "@yume-chan/koshare-router";
 
-import KoshareClient, { PacketType } from '../src';
-import { delay } from '../src/util';
+import { randomString, randomPort } from './__helpers__/util';
 
-import { randomString, randomPort } from './util';
+import KoshareClient from './client';
+import { PacketType } from './packet';
+import { delay } from './util';
 
 const noop = () => { };
 
@@ -46,7 +47,7 @@ describe('client', () => {
 
             expect(client.prefix).toBe(prefix);
             expect(client.socket).toBeTruthy();
-        })
+        });
 
         it('should throw when error', () => {
             return expect(KoshareClient.connect('ws://localhost:7999')).rejects.toThrow();
@@ -70,7 +71,7 @@ describe('client', () => {
 
             const topic = Date.now().toString();
             return expect(client.subscribe(topic, noop)).rejects.toThrow();
-        })
+        });
     });
 
     describe('broadcast', () => {
@@ -159,4 +160,4 @@ describe('client', () => {
 
         expect(handler).toBeCalledTimes(1);
     });
-})
+});

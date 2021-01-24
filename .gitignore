@@ -1,3 +1,10 @@
 coverage
 node_modules
-lib
+
+# Output
+cjs
+esm
+dts
+
+# Logs
+*.log

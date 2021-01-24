@@ -31,7 +31,7 @@ export default class KoshareClient {
 
     private _keepAliveInterval: number;
 
-    private _keepAliveTimeoutId: NodeJS.Timeout | null = null;
+    private _keepAliveTimeoutId: ReturnType<typeof setTimeout> | null = null;
 
     protected constructor(prefix: string, socket: WebSocket, keepAliveInterval = 60 * 1000) {
         this._prefix = prefix;
