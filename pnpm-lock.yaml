@@ -5,7 +5,7 @@ dependencies:
   tslib: 2.1.0
 devDependencies:
   '@jest-runner/electron': 3.0.0_electron@11.2.1
-  '@types/jest': 26.0.20
+  '@types/jest': 26.0.21
   '@types/node': 14.14.22
   '@types/ws': 7.4.0
   '@yume-chan/koshare-router': 1.0.3
@@ -1530,6 +1530,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-9zi2Y+5USJRxd0FsahERhBwlcvFh6D2GLQnY2FH2BzK8J9s9omvNHIbvABwIluXa0fD8XVKMLTO0aOEuUfACAA==
+  /@types/jest/26.0.21:
+    dependencies:
+      jest-diff: 26.6.2
+      pretty-format: 26.6.2
+    dev: true
+    resolution:
+      integrity: sha512-ab9TyM/69yg7eew9eOwKMUmvIZAKEGZYlq/dhe5/0IMUd/QLJv5ldRMdddSn+u22N13FP3s5jYyktxuBwY0kDA==
   /@types/node/12.19.15:
     dev: true
     resolution:
@@ -6381,7 +6388,7 @@ packages:
       integrity: sha1-x+sXyT4RLLEIb6bY5R+wZnt5pfk=
 specifiers:
   '@jest-runner/electron': 3.0.0
-  '@types/jest': 26.0.20
+  '@types/jest': 26.0.21
   '@types/node': 14.14.22
   '@types/ws': 7.4.0
   '@yume-chan/async-operation-manager': 2.1.4
