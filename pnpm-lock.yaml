@@ -4,7 +4,7 @@ dependencies:
   '@yume-chan/multi-map': 1.0.2
   tslib: 2.1.0
 devDependencies:
-  '@jest-runner/electron': 3.0.0_electron@11.2.1
+  '@jest-runner/electron': 3.0.1_electron@11.2.1
   '@types/jest': 26.0.20
   '@types/node': 14.14.22
   '@types/ws': 7.4.0
@@ -1077,7 +1077,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-frsV83vLDNEYvBcoUa5aizV3JyG8GPTB/eUN9MhX+0rAuP2H0tFceoNj16evufDsNFJY9VKlTkZZUY5tfmiGcw==
-  /@jest-runner/electron/3.0.0_electron@11.2.1:
+  /@jest-runner/electron/3.0.1_electron@11.2.1:
     dependencies:
       '@jest-runner/core': 3.0.0
       '@jest-runner/rpc': 3.0.0
@@ -1092,7 +1092,7 @@ packages:
     peerDependencies:
       electron: '*'
     resolution:
-      integrity: sha512-aYZQFt360UCnqTuACdxbs1hUm71D27zzcGHuN0m5souk6YHf9VT33rch5Y33r4UTfbJsS1lx07Y+HaJTol9R5w==
+      integrity: sha512-5OFLQXPQ5OzojGgsBdHnTRnLyCoRapyjFWo1N6pqbTOwANVlKeha0VCc6JNrJyckz5WRZ4rVRZZ9Z7p6VfhhsA==
   /@jest-runner/rpc/3.0.0:
     dependencies:
       '@jest-runner/core': 3.0.0
@@ -4292,7 +4292,7 @@ packages:
       whatwg-encoding: 1.0.5
       whatwg-mimetype: 2.3.0
       whatwg-url: 7.1.0
-      ws: 7.4.0
+      ws: 7.4.2
       xml-name-validator: 3.0.0
     dev: true
     engines:
@@ -6380,7 +6380,7 @@ packages:
     resolution:
       integrity: sha1-x+sXyT4RLLEIb6bY5R+wZnt5pfk=
 specifiers:
-  '@jest-runner/electron': 3.0.0
+  '@jest-runner/electron': 3.0.1
   '@types/jest': 26.0.20
   '@types/node': 14.14.22
   '@types/ws': 7.4.0
