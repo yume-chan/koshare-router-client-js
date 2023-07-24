@@ -33,7 +33,7 @@
         "@yume-chan/async-operation-manager": "2.1.4",
         "@yume-chan/fallback-websocket": "1.0.3",
         "@yume-chan/multi-map": "^1.0.2",
-        "tslib": "2.1.0"
+        "tslib": "2.6.1"
     },
     "devDependencies": {
         "@jest-runner/electron": "3.0.0",
