@@ -48,7 +48,7 @@ npm install ws
 ``` ts
 type ForwardPacketHandler<T> = (packet: ForwardPacket<T>) => void;
 
-export default class KoshareClient {
+export class KoshareClient {
     static connect(endpoint: string, prefix?: string): Promise<KoshareClient>;
 
     subscribe<T extends object>(topic: string, handler: ForwardPacketHandler<T>): Promise<void>;

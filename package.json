@@ -1,6 +1,6 @@
 {
     "name": "@yume-chan/koshare-router-client",
-    "version": "1.0.3",
+    "version": "2.0.0",
     "description": "A Koshare Router client implementation for browsers and Node.js",
     "keywords": [
         "webrtc",
@@ -20,35 +20,38 @@
     "bugs": {
         "url": "https://github.com/yume-chan/koshare-router-client-js/issues"
     },
-    "main": "cjs/index.js",
-    "module": "esm/index.js",
-    "types": "dts/index.d.ts",
+    "main": "esm/index.js",
+    "types": "esm/index.d.ts",
+    "type": "module",
     "scripts": {
-        "build": "rimraf {cjs,esm,dts} && tsc -b tsconfig.esm.json tsconfig.cjs.json",
-        "test": "jest",
-        "coverage": "jest --coverage",
+        "build": "rimraf --glob {cjs,esm} && tsc -b tsconfig.esm.json",
+        "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage",
         "prepublishOnly": "npm run build"
     },
     "dependencies": {
-        "@yume-chan/async-operation-manager": "2.1.4",
-        "@yume-chan/fallback-websocket": "1.0.3",
+        "@yume-chan/async": "^2.1.4",
+        "@yume-chan/fallback-websocket": "^1.0.4",
         "@yume-chan/multi-map": "^1.0.2",
-        "tslib": "2.1.0"
+        "tslib": "^2.6.2"
     },
     "devDependencies": {
-        "@jest-runner/electron": "3.0.0",
-        "@types/jest": "26.0.20",
-        "@types/node": "14.14.22",
-        "@types/ws": "7.4.0",
-        "@yume-chan/koshare-router": "1.0.3",
-        "electron": "11.2.1",
-        "jest": "26.6.3",
-        "rimraf": "3.0.2",
-        "ts-jest": "26.4.4",
-        "typescript": "4.1.3",
-        "ws": "7.4.2"
+        "@jest/globals": "^29.7.0",
+        "@types/node": "^20.8.3",
+        "@types/ws": "^8.5.6",
+        "@yume-chan/koshare-router": "^1.0.3",
+        "cross-env": "^7.0.3",
+        "jest": "^29.7.0",
+        "rimraf": "^5.0.5",
+        "ts-jest": "^29.1.1",
+        "typescript": "^5.2.2",
+        "ws": "^8.14.2"
     },
     "peerDependencies": {
-        "ws": "^7.0.0"
+        "ws": "^8.0.0"
+    },
+    "peerDependenciesMeta": {
+        "ws": {
+            "optional": true
+        }
     }
 }

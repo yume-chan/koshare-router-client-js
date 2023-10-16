@@ -1,12 +1,21 @@
-import { connect as connectWebSocket } from '@yume-chan/fallback-websocket';
+import { connect as connectWebSocket } from "@yume-chan/fallback-websocket";
 
-import KoshareClient, { AsyncOperationResponsePacket } from "./client";
-import { delay } from './util';
-import { PacketType } from './packet';
+import { KoshareClient, type AsyncOperationResponsePacket } from "./client.js";
+import { PacketType } from "./packet.js";
+import { delay } from "./util.js";
 
-export default class KoshareReconnectClient extends KoshareClient {
-    public static async connect(endpoint: string, prefix: string = ''): Promise<KoshareReconnectClient> {
-        return new KoshareReconnectClient(endpoint, prefix, await connectWebSocket(endpoint));
+export class KoshareReconnectClient extends KoshareClient {
+    public static async connect(
+        endpoint: string,
+        prefix: string = "",
+        keepAliveInterval = 60 * 1000,
+    ): Promise<KoshareReconnectClient> {
+        return new KoshareReconnectClient(
+            endpoint,
+            prefix,
+            await connectWebSocket(endpoint),
+            keepAliveInterval,
+        );
     }
 
     private _endpoint: string;
@@ -15,7 +24,12 @@ export default class KoshareReconnectClient extends KoshareClient {
 
     private _closed = false;
 
-    protected constructor(endpoint: string, prefix: string, socket: WebSocket, keepAliveInterval = 60 * 1000) {
+    protected constructor(
+        endpoint: string,
+        prefix: string,
+        socket: WebSocket,
+        keepAliveInterval = 60 * 1000,
+    ) {
         super(prefix, socket, keepAliveInterval);
 
         this._endpoint = endpoint;
@@ -33,7 +47,10 @@ export default class KoshareReconnectClient extends KoshareClient {
                 this._disconnected = false;
 
                 for (const topic of this._handlers.keys()) {
-                    await this.sendOperation<AsyncOperationResponsePacket>(PacketType.Subscribe, topic);
+                    await this.sendOperation<AsyncOperationResponsePacket>(
+                        PacketType.Subscribe,
+                        topic,
+                    );
                 }
 
                 return;
@@ -46,14 +63,18 @@ export default class KoshareReconnectClient extends KoshareClient {
     protected prepareSocket(socket: WebSocket) {
         super.prepareSocket(socket);
 
-        socket.addEventListener('close', () => {
+        socket.addEventListener("close", () => {
             if (!this._closed) {
                 this._reconnectPromise = this.reconnect();
             }
         });
     }
 
-    protected async send(type: PacketType, topic: string, extra?: object): Promise<void> {
+    protected async send(
+        type: PacketType,
+        topic: string,
+        extra?: object,
+    ): Promise<void> {
         if (this._disconnected) {
             await this._reconnectPromise;
         }

@@ -1,12 +1,19 @@
+import {
+    afterEach,
+    beforeEach,
+    describe,
+    expect,
+    jest,
+    test,
+} from "@jest/globals";
 import { KoshareServer } from "@yume-chan/koshare-router";
 
-import { randomPort } from './__helpers__/util';
+import { randomPort } from "./__helpers__/util.js";
 
-import KoshareReconnectClient from './reconnect-client';
-import { delay } from './util';
+import { KoshareReconnectClient } from "./reconnect-client.js";
+import { delay } from "./util.js";
 
-
-describe('reconnect client', () => {
+describe("reconnect client", () => {
     let server!: KoshareServer;
     let client!: KoshareReconnectClient;
     let echo!: KoshareReconnectClient;
@@ -20,21 +27,21 @@ describe('reconnect client', () => {
     });
 
     afterEach(() => {
-        if (typeof echo !== 'undefined') {
+        if (typeof echo !== "undefined") {
             echo.close();
         }
 
-        if (typeof client !== 'undefined') {
+        if (typeof client !== "undefined") {
             client.close();
         }
 
-        if (typeof server !== 'undefined') {
+        if (typeof server !== "undefined") {
             server.close();
         }
     });
 
-    test('reconnect', async () => {
-        await client.subscribe('test', () => { });
+    test("reconnect", async () => {
+        await client.subscribe("test", () => { });
 
         server.close();
 
@@ -43,11 +50,11 @@ describe('reconnect client', () => {
         server = await KoshareServer.listen({ port });
 
         const handlePacket = jest.fn();
-        server.on('packet', handlePacket);
+        server.on("packet", handlePacket);
 
-        await client.broadcast('test');
+        await client.broadcast("test");
 
-        expect(client).toHaveProperty('disconnected', false);
+        expect(client).toHaveProperty("disconnected", false);
         expect(handlePacket).toBeCalledTimes(1);
     }, 10000);
 });

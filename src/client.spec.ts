@@ -1,11 +1,20 @@
-import { PromiseResolver } from '@yume-chan/async-operation-manager';
+import {
+    afterEach,
+    beforeEach,
+    describe,
+    expect,
+    it,
+    jest,
+    test,
+} from "@jest/globals";
+import { PromiseResolver } from "@yume-chan/async";
 import { KoshareServer } from "@yume-chan/koshare-router";
 
-import { randomString, randomPort } from './__helpers__/util';
+import { randomPort, randomString } from "./__helpers__/util.js";
 
-import KoshareClient from './client';
-import { PacketType } from './packet';
-import { delay } from './util';
+import { KoshareClient } from "./client.js";
+import { PacketType } from "./packet.js";
+import { delay } from "./util.js";
 
 const noop = () => { };
 
@@ -13,7 +22,7 @@ interface Data {
     data: string;
 }
 
-describe('client', () => {
+describe("client", () => {
     let server!: KoshareServer;
     let client!: KoshareClient;
     let echo!: KoshareClient;
@@ -27,46 +36,55 @@ describe('client', () => {
     });
 
     afterEach(() => {
-        if (typeof echo !== 'undefined') {
+        if (typeof echo !== "undefined") {
             echo.close();
         }
 
-        if (typeof client !== 'undefined') {
+        if (typeof client !== "undefined") {
             client.close();
         }
 
-        if (typeof server !== 'undefined') {
+        if (typeof server !== "undefined") {
             server.close();
         }
     });
 
-    describe('connect', () => {
-        it('should success', async () => {
+    describe("connect", () => {
+        it("should success", async () => {
             const prefix = randomString();
-            const client = await KoshareClient.connect(`ws://localhost:${port}`, prefix);
+            const client = await KoshareClient.connect(
+                `ws://localhost:${port}`,
+                prefix,
+            );
 
             expect(client.prefix).toBe(prefix);
             expect(client.socket).toBeTruthy();
         });
 
-        it('should throw when error', () => {
-            return expect(KoshareClient.connect('ws://localhost:7999')).rejects.toThrow();
+        it("should throw when error", () => {
+            return expect(
+                KoshareClient.connect("ws://localhost:7999"),
+            ).rejects.toThrow();
         });
     });
 
-    describe('subscribe', () => {
-        it('should success', async () => {
+    describe("subscribe", () => {
+        it("should success", async () => {
             const handlePacket = jest.fn();
-            server.on('packet', handlePacket);
+            server.on("packet", handlePacket);
 
             const topic = Date.now().toString();
             await client.subscribe(topic, noop);
 
             expect(handlePacket).toBeCalledTimes(1);
-            expect(handlePacket).toBeCalledWith({ type: PacketType.Subscribe, topic, id: expect.any(Number) });
+            expect(handlePacket).toBeCalledWith({
+                type: PacketType.Subscribe,
+                topic,
+                id: expect.any(Number),
+            });
         });
 
-        it('should throw when disconnected', async () => {
+        it("should throw when disconnected", async () => {
             client.close();
 
             const topic = Date.now().toString();
@@ -74,8 +92,8 @@ describe('client', () => {
         });
     });
 
-    describe('broadcast', () => {
-        it('should success', async () => {
+    describe("broadcast", () => {
+        it("should success", async () => {
             const topic = Date.now().toString();
             const data = randomString();
 
@@ -85,23 +103,27 @@ describe('client', () => {
             });
 
             const handlePacket = jest.fn();
-            server.on('packet', handlePacket);
+            server.on("packet", handlePacket);
 
             await client.broadcast<Data>(topic, { data });
 
             await resolver.promise;
 
             expect(handlePacket).toBeCalledTimes(1);
-            expect(handlePacket).toBeCalledWith({ type: PacketType.Broadcast, topic, data });
+            expect(handlePacket).toBeCalledWith({
+                type: PacketType.Broadcast,
+                topic,
+                data,
+            });
         });
 
-        it('should throw if containing invalid body', () => {
+        it("should throw if containing invalid body", () => {
             const topic = Date.now().toString();
             return expect(client.broadcast(topic, { topic })).rejects.toThrow();
         });
     });
 
-    test('message', async () => {
+    test("message", async () => {
         const topic = Date.now().toString();
         const data = randomString();
 
@@ -110,7 +132,7 @@ describe('client', () => {
 
         await echo.subscribe<Data>(topic, async (packet) => {
             handlePacket = jest.fn();
-            server.on('packet', handlePacket);
+            server.on("packet", handlePacket);
 
             await echo!.message<Data>(topic, packet.src, { data: packet.data });
         });
@@ -124,10 +146,15 @@ describe('client', () => {
         await resolver.promise;
 
         expect(handlePacket).toBeDefined();
-        expect(handlePacket).toBeCalledWith({ type: PacketType.Message, topic, data, dst: expect.any(Number) });
+        expect(handlePacket).toBeCalledWith({
+            type: PacketType.Message,
+            topic,
+            data,
+            dst: expect.any(Number),
+        });
     });
 
-    test('unsubscribe handler', async () => {
+    test("unsubscribe handler", async () => {
         const topic = Date.now().toString();
         const handler = jest.fn(() => { });
 
@@ -144,7 +171,7 @@ describe('client', () => {
         expect(handler).toBeCalledTimes(1);
     });
 
-    test('unsubscribe topic', async () => {
+    test("unsubscribe topic", async () => {
         const topic = Date.now().toString();
         const handler = jest.fn(() => { });
 

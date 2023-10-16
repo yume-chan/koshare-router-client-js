@@ -1,4 +1,9 @@
 {
     "editor.detectIndentation": false,
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "cSpell.words": [
+        "Koshare",
+        "webrtc",
+        "yume"
+    ]
 }
